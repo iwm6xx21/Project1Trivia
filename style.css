@@ -1,1 +1,50 @@
+body {
+  background: linear-gradient(-45deg, #e7be3c, #490edc, #4293cc, #627fa7);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
 
+h1 {
+  color: white;
+  margin: auto, 0;
+  margin-top: 120px;
+  text-align: center;
+  font-size: 70px;
+  text-decoration-line: underline;
+  font-family: "Bangers", cursive;
+}
+
+button {
+  font-size: 40px;
+  padding: 20px;
+  background-color: black;
+  font-family: "Bangers", cursive;
+  color: white;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+
+#questions {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 70px;
+}
+
+button:hover {
+  background-color: white;
+  color: #490edc;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
