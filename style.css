@@ -23,6 +23,16 @@ button {
   color: white;
   border: 3px solid black;
   border-radius: 8px;
+  /* visibility: hidden; */
+}
+
+#questionsAndAnswers {
+  visibility: hidden;
+}
+
+#startGame-btn {
+  margin: 0 auto;
+  display: flex;
 }
 
 #questions {
@@ -30,6 +40,14 @@ button {
   font-size: 50px;
   color: white;
   margin-bottom: 70px;
+  /* visibility: hidden; */
+}
+
+.btn {
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 8px;
+  padding: 10px;
 }
 
 button:hover {
