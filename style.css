@@ -35,6 +35,14 @@ button {
   display: flex;
 }
 
+#next-btn {
+  margin: 0 auto;
+  display: flex;
+  margin-top: 20px;
+  background-color: gray;
+  visibility: hidden;
+}
+
 #questions {
   text-align: center;
   font-size: 50px;
@@ -50,9 +58,19 @@ button {
   padding: 10px;
 }
 
-button:hover {
+.btn:hover {
   background-color: white;
   color: #490edc;
+}
+
+.toggle:hover {
+  background-color: white;
+  color: #490edc;
+}
+
+#next-btn:hover {
+  color: black;
+  background-color: white;
 }
 
 @keyframes gradient {

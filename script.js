@@ -1,12 +1,10 @@
-//Pseudocode
-
 
 //Essential Variables
 
 const startButton = document.getElementById("startGame-btn")
 const questionAndAnswers = document.getElementById("questionsAndAnswers")
 const grabQuestion = document.getElementById("questions")
-// const grabAnswers = document.getElementById('button-choices')
+const nextButton = document.getElementById("next-btn")
 let questionsLoop, currentIndex
 
 
@@ -19,7 +17,7 @@ function startTheGame () {
         if(theButton === "hidden") {
             alert("Instructions: You must answer at least 4/5 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
         questionAndAnswers.style.visibility = "visible"
-        //Test Code
+        
         questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
 
         currentIndex = 0
@@ -41,6 +39,21 @@ const questionsAsked = [
         ]
     },
 
+    {question: "What's the name of Larry's manager", answer:[
+        {choice: "Jeff Green", right: true}, {choice: "Leon Black", right:false}, {choice: "Ted Danson", right: false}
+        ]
+    },
+
+    {question: "According to Larry, why are hamsters fun to have as pets?", answer:[
+        {choice: "They don't bark", right: false}, {choice: "You can tortue them", right:true}, {choice: "They're not needy like other pets", right: false}
+        ]
+    },
+
+    {question: "What is the name of the Curb theme song?", answer:[
+        {choice: "Frisky", right: false}, {choice: "Frolic", right:true}, {choice: "Fancy", right: false}
+        ]
+    },
+
 ]
 
 
@@ -50,10 +63,18 @@ function showTheQuestion (question) {
     grabQuestion.innerHTML = question.question
     document.querySelectorAll(".btn").forEach((btn, i) => {
         btn.innerHTML = question.answer[i].choice
-        if (question.answer[1].right === true){
-            btn.dataset.right = question.answer[1].right
-        }
-        btn.addEventListener("click", answerSelected)
+        
+        let correctAnswer = question.answer[i].right
+        console.log(correctAnswer)
+        
+        btn.addEventListener("click", () => {
+            if(correctAnswer === true) {
+                alert("That's right!")
+            } else if (correctAnswer === false)
+                alert("Wrong!")
+                nextButton.style.visibility = "visible"
+        });
+
         
     })
 }
@@ -65,11 +86,11 @@ function showTheQuestion (question) {
 // grabAnswers.addEventListener("click", answerSelected)
 
 
-function answerSelected () {
+// function answerSelected () {
    
-    alert("Clicked")
+//     alert("Clicked")
 
-}
+// }
     
    
         
@@ -105,3 +126,7 @@ function scoreTracker () {
 
 }
 
+// ("click", answerSelected)
+//         if(correctAnswer === true) {
+//             alert("That's right!")
+//         }
