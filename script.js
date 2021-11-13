@@ -73,6 +73,7 @@ function showTheQuestion (question) {
             } else if (correctAnswer === false)
                 alert("Wrong!")
                 nextButton.style.visibility = "visible"
+                // btn.removeEventListener()
         });
 
         
