@@ -26,13 +26,9 @@ button {
   /* visibility: hidden; */
 }
 
+/* hidden buttons */
 #questionsAndAnswers {
   visibility: hidden;
-}
-
-#startGame-btn {
-  margin: 0 auto;
-  display: flex;
 }
 
 #next-btn {
@@ -41,6 +37,15 @@ button {
   margin-top: 20px;
   background-color: gray;
   visibility: hidden;
+}
+
+#score-storage {
+  visibility: hidden;
+}
+
+#startGame-btn {
+  margin: 0 auto;
+  display: flex;
 }
 
 #questions {
@@ -73,6 +78,41 @@ button {
   background-color: white;
 }
 
+#hud {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-top: 150px;
+  position: absolute;
+  right: 150px;
+  width: 200px;
+  height: 120px;
+}
+
+.prefix {
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  text-decoration-line: underline;
+  font-family: "Bangers", cursive;
+}
+
+.score-text {
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Bangers", cursive;
+
+  /* font-family: "Press Start 2P", cursive; */
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

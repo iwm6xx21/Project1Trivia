@@ -7,23 +7,34 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    
     <title>Curb Your Enthusiasm Trivia</title>
 </head>
 <body> 
     <h1>Curb Your Enthusiasm Trivia</h1>
     <div class = "container">
+        <div id ="hud">
+            <div id = "score-storage">
+                <h2 class = "prefix">
+                    Score
+                </h2>
+                <h2 class = "score-text" id = "score">
+                    0
+                </h2>
+            </div>
+        </div>
         <div id = "questionsAndAnswers">
             <div id = "questions">Question</div>
-            <div id = "button-choices" class = "btn-grid">
-                <button class ="btn" data-answer ="right">Answer 1</button>
-                <button class ="btn" data-answer ="right">Answer 1</button>
-                <button class ="btn"data-answer ="right">Answer 1</button>
+            <div id = "button-choices">
+                <button class ="btn">Answer 1</button>
+                <button class ="btn">Answer 1</button>
+                <button class ="btn">Answer 1</button>
             </div>
         </div>
 
-        <div>
+        <div id = "start-next">
+            <button id= "startGame-btn" class = "toggle">Start Game 🎬</button>
             <button id = "next-btn">Next</button>
-            <button id= "startGame-btn" class = "toggle">Start Game</button>
         </div>
 
     </div>
