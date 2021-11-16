@@ -81,6 +81,7 @@ button {
 #hud {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   padding-left: 120px;
   padding-top: 150px;
   position: absolute;
@@ -102,17 +103,8 @@ button {
   text-align: center;
   font-size: 45px;
   font-family: "Bangers", cursive;
-
-  /* font-family: "Press Start 2P", cursive; */
 }
 
-.correct {
-  background-color: green;
-}
-
-.incorrect {
-  background-color: red;
-}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -122,5 +114,17 @@ button {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .prefix {
+    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    padding-left: 45px;
+  }
+  .score-text {
+    padding-left: 45px;
   }
 }

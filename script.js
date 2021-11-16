@@ -47,12 +47,12 @@ const questionsAsked = [
         {choice: "Friends", right: false}, {choice: "Seinfeld", right:true}, {choice: "Arrested Development", right: false}
         ]
     },
-    {question: "What is Larry's Ex-Wife's name on the show", answer:[
+    {question: "What is Larry's Ex-Wife's name on the show?", answer:[
         {choice: "Victoria", right: false}, {choice: "Susie", right:false}, {choice: "Cheryl", right: true}
         ]
     },
 
-    {question: "What's the name of Larry's manager", answer:[
+    {question: "What's the name of Larry's manager?", answer:[
         {choice: "Jeff Green", right: true}, {choice: "Leon Black", right:false}, {choice: "Ted Danson", right: false}
         ]
     },
