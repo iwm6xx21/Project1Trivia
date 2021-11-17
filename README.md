@@ -5,6 +5,8 @@ A ‘Self-Scoring Trivia’ game based on the HBO hit show ‘Curb your Enthusia
 Technologies Used
 
 - Vanilla JavaScript
+- HTML
+- CSS
 
 Installation instructions
 
