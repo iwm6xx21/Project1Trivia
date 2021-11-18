@@ -10,6 +10,9 @@ Technologies Used
 
 Installation instructions
 
+Fork the respository
+And enjoy the Game
+
 User stories
 
 MVP Goals
@@ -30,6 +33,7 @@ As a player, I would like ‘Curb Your Enthusiasm’ storylines connected to the
 As a player, I would like to hear the ‘Curb’ theme song if I lose the game.
 As a player, I would like to be met with character quotes after submitting my answers.
 As a player, I would like the ability to play the game with a friend.
+
 Wireframes
 
 Unsolved Problems Details

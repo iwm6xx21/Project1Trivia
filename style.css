@@ -23,7 +23,6 @@ button {
   color: white;
   border: 3px solid black;
   border-radius: 8px;
-  /* visibility: hidden; */
 }
 
 /* hidden buttons */
@@ -53,7 +52,6 @@ button {
   font-size: 50px;
   color: white;
   margin-bottom: 70px;
-  /* visibility: hidden; */
 }
 
 .btn {
@@ -88,6 +86,7 @@ button {
   right: 150px;
   width: 200px;
   height: 120px;
+  /* border: 5px solid red; */
 }
 
 .prefix {
@@ -119,7 +118,7 @@ button {
 
 @media all and (max-width: 850px) {
   .prefix {
-    padding-top: 300px;
+    padding-top: 350px;
     display: flex;
     justify-content: center;
     padding-left: 45px;

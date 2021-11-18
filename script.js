@@ -25,7 +25,7 @@ nextButton.addEventListener("click", () => {
 function startTheGame () {
     let theButton = startButton.style.visibility ="hidden"
         if(theButton === "hidden") {
-            alert("Instructions: You must answer at least 4/5 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
+            alert("Instructions: You must answer at least 8/10 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
         questionAndAnswers.style.visibility = "visible"
         scoreStorage.style.visibility ="visible"
         
@@ -33,6 +33,7 @@ function startTheGame () {
         questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
 
         currentIndex = 0
+        //will reset score to 0 once game is restarted
         scores.innerText = "0"
         nextQuestion()
 
@@ -58,7 +59,7 @@ const questionsAsked = [
     },
 
     {question: "According to Larry, why are hamsters fun to have as pets?", answer:[
-        {choice: "They don't bark", right: false}, {choice: "You can tortue them", right:true}, {choice: "They're not needy like other pets", right: false}
+        {choice: "They don't bark", right: false}, {choice: "You can tortue them", right:true}, {choice: "They're not needy", right: false}
         ]
     },
 
@@ -66,6 +67,32 @@ const questionsAsked = [
         {choice: "Frisky", right: false}, {choice: "Frolic", right:true}, {choice: "Fancy", right: false}
         ]
     },
+
+    {question: "What basketball player does Larry accidentally injure when his outstretched leg trips them during a game?", answer:[
+        {choice: "Michael Jordan", right: false}, {choice: "LeBron James", right:false}, {choice: "Shaquille O'Neal", right: true}
+        ]
+    },
+
+    {question: "In Season 7, Larry writes a Seinfeld Reunion Show for what main reason?", answer:[
+        {choice: "To win his ex-wife back", right: true}, {choice: "He had free time", right:false}, {choice: "He missed the crew", right: false}
+        ]
+    },
+
+    {question: "How many seconds is Larry's maximum hug time?", answer:[
+        {choice: "7 seconds", right: false}, {choice: "3 seconds", right:false}, {choice: "5 seconds", right: true}
+        ]
+    },
+
+    {question: "What does Larry steal from his manager's daughter?", answer:[
+        {choice: "A doll", right: true}, {choice: "An ice cream sundae", right:false}, {choice: "A cell phone", right: false}
+        ]
+    },
+
+    {question: "Which character, other than Larry David, has the most appearances in the show?", answer:[
+        {choice: "Susie", right: false}, {choice: "Jeff", right:true}, {choice: "Cheryl", right: false}
+        ]
+    },
+    
 
 ]
 
@@ -107,13 +134,14 @@ function selectAnswers (e) {
             nextButton.style.visibility = "visible"
         } 
         else {
-            startButton.innerText = "Restart Game"
+            startButton.innerText = "Play Again"
             startButton.style.visibility ="visible"
             const TotalScore = scores.innerText = score
-            if(TotalScore >=4) {grabQuestion.innerText = `You got ${TotalScore} correct which is ${TotalScore / 5 * 100}%! 'Pretty, Pretty, Pretty Good!' Larry David would be proud. 👴🏻`;score = 0} 
+            if(TotalScore >=8) {grabQuestion.innerText = `You got ${TotalScore} correct which is ${TotalScore / 10 * 100}%! 'Pretty, Pretty, Pretty Good!' Larry David would be proud.`;score = 0
+        } 
             
             else {
-                grabQuestion.innerText = `You got ${TotalScore} correct which is ${TotalScore / 5 * 100}%. 'You, know, I'm really not that bright' Larry David would be underwhelmed.` ; score = 0
+                grabQuestion.innerText = `You got ${TotalScore} correct which is ${TotalScore / 10 * 100}%. 'You, know, I'm really not that bright' Larry David would be underwhelmed.` ; score = 0
             }
             
         }
