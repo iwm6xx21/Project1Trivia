@@ -13,7 +13,7 @@ Technologies Used
 
 Installation instructions
 
-Click the Game URL and enjoy!
+Click the Game URL link in the 'About' section of this repo and enjoy!
 
 User stories
 
