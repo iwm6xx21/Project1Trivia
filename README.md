@@ -39,6 +39,12 @@ As a player, I would like the ability to play the game with a friend.
 
 Wireframes
 
+![Initial_Landing_Display](https://user-images.githubusercontent.com/90514977/142656106-a06e9485-04b3-4c76-b5be-34ad9a7297db.png)
+
+![Game_Start_View](https://user-images.githubusercontent.com/90514977/142656126-3c4d6452-6475-4792-a688-b17a37420328.png)
+
+![New Game Results](https://user-images.githubusercontent.com/90514977/142656160-84838459-f9ce-4bcd-a93f-5771e18ff71c.png)
+
 Unsolved Problems Details
 
 Link to hosted project URL
