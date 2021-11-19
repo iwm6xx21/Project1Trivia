@@ -13,8 +13,7 @@ Technologies Used
 
 Installation instructions
 
-Fork the respository
-And enjoy the Game
+Click the Game URL and enjoy!
 
 User stories
 
