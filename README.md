@@ -28,6 +28,7 @@ As a player, I would like to know when the game is over.
 As a player, I would like to easily play again once the game is over.
 
 Stretch Goals
+
 As a player, I would like the game to be aesthetically pleasing.
 As a player, I would like the game to have flashy features and cool responsive buttons.
 As a player, I would like the game to have animation once a big game event takes place (Animation for winning and losing the game).
