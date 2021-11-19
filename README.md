@@ -2,6 +2,9 @@
 
 A ‘Self-Scoring Trivia’ game based on the HBO hit show ‘Curb your Enthusiasm.’ This is an online single-player game that tests a ‘curb-fanatic’s’ show knowledge.
 
+![Project1 Screenshot](https://user-images.githubusercontent.com/90514977/142654868-c3886b94-e78a-4a44-abc0-ca19c788de8f.png)
+
+
 Technologies Used
 
 - Vanilla JavaScript
