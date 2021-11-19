@@ -8,11 +8,9 @@ const nextButton = document.getElementById("next-btn")
 const answersDiv = document.getElementById("button-choices")
 const scoreStorage = document.getElementById("score-storage")
 const scores = document.getElementById("score")
+const playMusic = document.getElementById("music")
 let score = 0; 
 let questionsLoop, currentIndex
-
-
-
 
 // Start Button Prompts
 startButton.addEventListener("click", startTheGame)
@@ -20,7 +18,6 @@ nextButton.addEventListener("click", () => {
     currentIndex++
     nextQuestion()
 })
-
     
 function startTheGame () {
     let theButton = startButton.style.visibility ="hidden"
@@ -28,6 +25,7 @@ function startTheGame () {
             alert("Instructions: You must answer at least 8/10 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
         questionAndAnswers.style.visibility = "visible"
         scoreStorage.style.visibility ="visible"
+        playMusic.style.visibility = "visible"
         
         //will randomize the order of questions
         questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
@@ -40,7 +38,6 @@ function startTheGame () {
         
     }
 }
-
 
 
 const questionsAsked = [
@@ -97,7 +94,6 @@ const questionsAsked = [
 ]
 
 
-
 function showTheQuestion (question) {
     grabQuestion.innerHTML = question.question
 
@@ -117,8 +113,6 @@ function showTheQuestion (question) {
              
     
 }
-
-
 
 
 function selectAnswers (e) {
@@ -148,9 +142,6 @@ function selectAnswers (e) {
         
 }
 
-
-
-
 // Game Scoring Function
 function scoreTracker () {
     scores.innerText = score +=1
@@ -162,7 +153,7 @@ function scoreTracker () {
     if(right) {
         alert("That's correct")
         scoreTracker()
-        console.log(score)
+    
     } else {
         alert("Wrong!")
     }
