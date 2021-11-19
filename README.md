@@ -48,4 +48,3 @@ Wireframes
 
 Unsolved Problems Details
 
-Link to hosted project URL
