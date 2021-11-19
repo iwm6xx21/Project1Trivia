@@ -45,5 +45,11 @@ Wireframes
 
 ![New Game Results](https://user-images.githubusercontent.com/90514977/142656160-84838459-f9ce-4bcd-a93f-5771e18ff71c.png)
 
-Unsolved Problems Details
+Major Hurdles
+
+Div positioning on page
+General JavaScript Structure approach
+Calling functions within functions
+Grabbing questions and answers within Array of Objects
+Randomization of questions with every new game 
 
