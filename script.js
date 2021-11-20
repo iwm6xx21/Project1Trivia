@@ -1,6 +1,4 @@
-
 //Essential Variables
-
 const startButton = document.getElementById("startGame-btn")
 const questionAndAnswers = document.getElementById("questionsAndAnswers")
 const grabQuestion = document.getElementById("questions")
@@ -10,36 +8,10 @@ const scoreStorage = document.getElementById("score-storage")
 const scores = document.getElementById("score")
 const playMusic = document.getElementById("music")
 let score = 0; 
+//Supports question randomization function
 let questionsLoop, currentIndex
 
-// Start Button Prompts
-startButton.addEventListener("click", startTheGame)
-nextButton.addEventListener("click", () => {
-    currentIndex++
-    nextQuestion()
-})
-    
-function startTheGame () {
-    let theButton = startButton.style.visibility ="hidden"
-        if(theButton === "hidden") {
-            alert("Instructions: You must answer at least 8/10 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
-        questionAndAnswers.style.visibility = "visible"
-        scoreStorage.style.visibility ="visible"
-        playMusic.style.visibility = "visible"
-        
-        //will randomize the order of questions
-        questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
-
-        currentIndex = 0
-        //will reset score to 0 once game is restarted
-        scores.innerText = "0"
-        nextQuestion()
-
-        
-    }
-}
-
-
+// questions and answer choices array of objects
 const questionsAsked = [
     {question: "Before ‘Curb Your Enthusiasm’ what show did Larry David write?", answer:[
         {choice: "Friends", right: false}, {choice: "Seinfeld", right:true}, {choice: "Arrested Development", right: false}
@@ -93,11 +65,39 @@ const questionsAsked = [
 
 ]
 
+// Start Button Listener
+startButton.addEventListener("click", startTheGame)
+// Next Button Listener
+nextButton.addEventListener("click", () => {
+    currentIndex++
+    nextQuestion()
+})
+    
+function startTheGame () {
+    let theButton = startButton.style.visibility ="hidden"
+        if(theButton === "hidden") {
+            alert("Instructions: You must answer at least 8/10 questions correctly (80%) to win the game! Click Ok to get started. Let's play!")
+        questionAndAnswers.style.visibility = "visible"
+        scoreStorage.style.visibility ="visible"
+        playMusic.style.visibility = "visible"
+        
+        //will randomize the order of questions
+        questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
+
+        currentIndex = 0
+        //will reset score to 0 once game is restarted
+        scores.innerText = "0"
+        nextQuestion()
+
+        
+    }
+}
 
 function showTheQuestion (question) {
+    // will grab questions from the 'questionsAsked' array object.
     grabQuestion.innerHTML = question.question
 
-    //will grab choices from the 'questionsAsked' Array object and loop through them. 
+    //will grab choices from the 'questionsAsked' array object and loop through them. 
     question.answer.forEach(answers => {
         const buttons = document.createElement('button')
         buttons.innerText = answers.choice
