@@ -29,7 +29,6 @@ button {
   border-radius: 8px;
 }
 
-/* hidden buttons */
 #questionsAndAnswers {
   visibility: hidden;
 }
@@ -145,14 +144,99 @@ audio {
   }
 }
 
-@media all and (max-width: 1000px) {
-  .prefix {
-    padding-top: 500px;
+@media all and (max-width: 780px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  #music {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #music > * {
+    flex: 1 100%;
+  }
+
+  .h3Tag {
     display: flex;
     justify-content: center;
-    padding-left: 75px;
+    align-items: center;
+  }
+
+  .player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #hud {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30px;
+    height: 10px;
+  }
+
+  #score-storage {
+    margin: auto;
+    margin-right: 320px;
+    margin-top: 90px;
+  }
+
+  .prefix {
+    font-size: 25px;
+    margin: auto;
+    visibility: hidden;
   }
   .score-text {
-    padding-left: 75px;
+    font-size: 25px;
+    margin: auto;
+    visibility: hidden;
+  }
+
+  .topContainer {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .topContainer > * {
+    flex: 1 100%;
+  }
+
+  .title {
+    margin: auto;
+  }
+
+  .gameStart {
+    font-size: 8px;
+  }
+
+  .toggle {
+    font-size: 20px;
+    padding: 7px;
+  }
+  #startGame-btn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  #questions {
+    font-size: 25px;
+  }
+
+  .btn {
+    font-size: 25px;
+    padding: 7px;
+  }
+
+  #next-btn {
+    font-size: 25px;
+    padding: 7px;
   }
 }

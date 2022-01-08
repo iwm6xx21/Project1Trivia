@@ -8,7 +8,7 @@ const scoreStorage = document.getElementById("score-storage")
 const scores = document.getElementById("score")
 const playMusic = document.getElementById("music")
 let score = 0; 
-//Supports question randomization function
+//Supports question randomization function. comma operator utilized. Will defualt to undefined
 let questionsLoop, currentIndex
 
 // questions and answer choices array of objects
@@ -81,7 +81,7 @@ function startTheGame () {
         scoreStorage.style.visibility ="visible"
         playMusic.style.visibility = "visible"
         
-        //will randomize the order of questions
+        //will randomize the order of questions. '-.5': a number less than or more than 0 50% of the time. 
         questionsLoop = questionsAsked.sort(() => Math.random() - .5 )
 
         currentIndex = 0
