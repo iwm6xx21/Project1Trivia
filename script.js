@@ -144,7 +144,7 @@ function selectAnswers (e) {
 
 // Game Scoring Function
 function scoreTracker () {
-    scores.innerText = score +=1
+    scores.innerText = score +=1 
 }
 
  function setStatusClass (element, right) {

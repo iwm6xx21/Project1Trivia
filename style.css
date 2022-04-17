@@ -43,6 +43,7 @@ button {
 
 #score-storage {
   visibility: hidden;
+  margin: auto;
 }
 
 .topContainer {
@@ -86,12 +87,10 @@ button {
   background-color: white;
 }
 
-#hud {
+.container {
   display: flex;
-  position: absolute;
-  right: -20px;
-  margin-right: 180px;
-  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
 .prefix {
@@ -140,7 +139,7 @@ audio {
   }
 }
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
   h1 {
     font-size: 40px;
   }
@@ -149,68 +148,43 @@ audio {
     font-size: 16px;
   }
 
-  #music {
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  #music > * {
-    flex: 1 100%;
-  }
-
-  .h3Tag {
-    display: flex;
+  .container {
+    flex-flow: wrap;
     justify-content: center;
-    align-items: center;
-  }
-
-  .player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #hud {
-    visibility: hidden;
-  }
-
-  #score-storage {
-    margin: auto;
-    margin-right: 320px;
-    margin-top: 90px;
   }
 
   .prefix {
-    visibility: hidden;
+    font-size: 20px;
   }
+
   .score-text {
-    visibility: hidden;
+    font-size: 20px;
   }
 
   .topContainer {
-    display: flex;
-    flex-flow: row wrap;
+    flex-flow: wrap;
+    justify-content: center;
   }
 
-  .topContainer > * {
-    flex: 1 100%;
+  .item :first-child {
+    flex-wrap: wrap;
   }
 
   .title {
     margin: auto;
   }
 
-  .gameStart {
-    font-size: 8px;
+  #startGame-btn {
+    margin: auto;
   }
 
   .toggle {
     font-size: 20px;
     padding: 7px;
   }
-  #startGame-btn {
-    margin: auto;
-    display: flex;
+
+  #music {
+    flex-flow: wrap;
     justify-content: center;
   }
 
